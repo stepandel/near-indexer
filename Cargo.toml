@@ -1,0 +1,31 @@
+[package]
+name = "gg-near-indexer"
+version = "0.1.0"
+authors = ["Cubic6"]
+publish = false
+# Please update rust-toolchain.toml as well when changing version here:
+rust-version = "1.64.0"
+edition = "2021"
+
+[dependencies]
+actix = "0.13.0"
+clap = { version = "3.1.6", features = [ "derive", "env" ] }
+openssl-probe = "0.1.4"
+serde_json = "1.0.68"
+serde = { version = "1.0.136", features = ["alloc", "derive", "rc"] }
+base64 = "0.13.0"
+hex = { version = "0.4.2", features = ["serde"] }
+bigdecimal = "=0.1.0"
+sha3 = "0.10.1"
+tokio = { version = "1.1", features = ["sync"] }
+tracing = "0.1.13"
+tracing-subscriber = "0.3.15"
+anyhow = "1.0.62"
+mongodb = "2.1.0"
+dotenv = "0.15.0"
+futures = "0.3.21"
+reqwest = { version = "0.11.11", features = ["json"] }
+
+actix-web = "=4.0.1" # Update to 4.2.1 when possible
+
+near-indexer = { git = "https://github.com/near/nearcore", rev = "9a3edd1fd2b8ee6968be69b30593dd134c2da7fa" }
